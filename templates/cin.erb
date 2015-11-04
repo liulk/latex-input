@@ -2,10 +2,10 @@
 %cname <%= name %>
 %ename <%= name %>
 %encoding UTF-8
-%selkey @\abcdefghijklmnopqrstuvwxyz
-%endkey 
+%selkey 123456789
+%endkey
 %keyname begin
-<% notation_to_unicode.keys.sort.each do |latex| %><%= latex %> <%= notation_to_unicode[latex] %>
+<% [*('0'..'9'), *('a'..'z')].each do |c| %><%= c %> <%= c %>
 <% end %>%keyname end
 %chardef begin
 <% notation_to_unicode.keys.sort.each do |latex| %><%= latex %> <%= notation_to_unicode[latex] %>
